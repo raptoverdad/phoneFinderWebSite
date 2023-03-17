@@ -25,21 +25,22 @@ export default
     }
   },
   methods: {
-    findPhone() {
+    findPhone() 
+    {
       fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({ username: 'nombreDeUsuario' })
-})
-.then(response => response.json())
-.then(data => {
-  console.log(data);
-})
-.catch(error => {
-  console.error(error);
-});
+      method: 'POST',
+      headers: {
+       'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ username: this.username })
+     })
+     .then(response => response.json())
+     .then(data => {
+      console.log(data);
+     })
+     .catch(error => {
+     console.error(error);
+     });
     }
   }
 }
