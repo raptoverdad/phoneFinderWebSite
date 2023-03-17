@@ -26,17 +26,20 @@ export default
   },
   methods: {
     findPhone() {
-      axios.post('phonefinderbotserver-production.up.railway.app/findPhone', {username: this.username})
-        .then(function (response) {
-          if(response.data.success===true){
-            console.log("success")
-          }else{
-            console.log("no success")
-          }
-        })
-        .catch(function (error) {
-          console.log(error)
-        })
+      fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ username: 'nombreDeUsuario' })
+})
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+})
+.catch(error => {
+  console.error(error);
+});
     }
   }
 }
