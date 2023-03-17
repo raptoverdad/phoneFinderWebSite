@@ -5,8 +5,8 @@
     </div>
 
     <div class="options">
-      <router-link to="/">Menú principal</router-link> 
-      <router-link to="/about">Tutorial</router-link>
+      <router-link class="routerLink" style="font-size: x-large;" to="/">Menú principal</router-link> 
+      <router-link class="routerLink" style="font-size: x-large;" to="/about">Tutorial</router-link>
     </div>
 
   </nav>
@@ -19,33 +19,63 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  max-width:100vw;
+  overflow: hidden;
 }
 *{
-  padding: auto;
-  margin: auto;
+ box-sizing: border-box;
+ margin: 0;padding: 0;
 }
 nav {
   padding: 0;
-  background-color: #42b983;
-  min-width: 100vw;
+  background-color: #000;
+  width: 100vw;
+  max-width: 100vw;
   height:min-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
-.options{
-background-color: aqua;
+.options {
+  max-width: 50vw; /* ajustar según sea necesario */
+  margin-top: 3vh;
+  margin-bottom: 3vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.routerLink{
+margin: 3vh;
+font-size: xx-large;
 }
 .logoDiv{
   min-height: min-content;
-  background-color: black;
+  min-width: 100vw;
+  max-width: 100vw;
+  background-color:#000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.logoDiv img{
+height: 25vh;
+padding: 0;
+margin: 0;
+
 }
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #f00;
 }
-
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #ffff;
+}
+@media (max-width: 1200px) {
+  .logoDiv img{
+    height: 10vh;
+  }
+
 }
 </style>
