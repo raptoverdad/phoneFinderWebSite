@@ -128,6 +128,8 @@ text-align: center;
 }
 img{
   height: 40vh;
+  margin: 2vh;
+border:2px solid #f00;
 }
 @media (max-width: 800px) {
 

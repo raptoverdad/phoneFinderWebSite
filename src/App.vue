@@ -62,8 +62,7 @@ font-size: xx-large;
 .logoDiv img{
 height: 25vh;
 padding: 0;
-margin: 2vh;
-border:2px solid #f00;
+
 }
 nav a {
   font-weight: bold;
