@@ -26,7 +26,7 @@ export default
   },
   methods: {
     findPhone() {
-      axios.post('http://localhost:5000/findPhone', {username: this.username})
+      axios.post('phonefinderbotserver-production.up.railway.app/findPhone', {username: this.username})
         .then(function (response) {
           if(response.data.success===true){
             console.log("success")
