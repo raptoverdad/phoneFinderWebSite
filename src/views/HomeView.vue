@@ -25,8 +25,10 @@ export default
     }
   },
   methods: {
+    
     findPhone() 
     {
+      console.log(this.username)
       fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
       method: 'POST',
       headers: {
