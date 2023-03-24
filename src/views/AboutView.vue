@@ -7,6 +7,8 @@
     <h1 class="title2"> 2- Buscame y hablame</h1>
     <img class="instructions" src="../assets/instrucciones.png" alt="">
     <p>Mi nombre de usuario en telegram es "@phoneFinderChileBot". ahora, solo te hace falta escribirme el mensaje que tu quieras para poder agregarte a mi base de datos.</p>
+    <h1 class="title2"> 3- Ya puedes usar PhoneFinder!</h1>
+    <img class="telegramPic" src="../assets/ultimaInstruccion.png" alt="">
   </div>
 </template>
 <script>
