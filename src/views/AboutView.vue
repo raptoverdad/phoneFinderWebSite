@@ -9,6 +9,7 @@
     <p>Mi nombre de usuario en telegram es "@phoneFinderChileBot". ahora, solo te hace falta escribirme el mensaje que tu quieras para poder agregarte a mi base de datos.</p>
     <h1 class="title2"> 3- Ya puedes usar PhoneFinder!</h1>
     <img class="telegramPic" src="../assets/ultimaInstruccion.png" alt="">
+    <p>Ya puedes ingresar tu nombre de usuario en la pagina principal de la pagina oficial de PhoneFinder cada vez que pierdas tu telefono. recuerda dejar tu telefono en vibracion o sonido para que tu celular vibre o suene al momento que lo estés buscando.  </p>
   </div>
 </template>
 <script>
@@ -24,8 +25,8 @@ background-color:#000;
 align-items: center;
 }
 .telegramPic{
-  max-height: 50vh;
-  max-width: 50vh;
+  height: 60vh;
+  width: 60vh;
 }
 .instructions{
 width:1280px;

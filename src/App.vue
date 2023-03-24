@@ -73,7 +73,7 @@ nav a.router-link-exact-active {
 }
 @media (max-width: 1200px) {
   .logoDiv img{
-    height: 10vh;
+    height: 15vh;
   }
 
 }

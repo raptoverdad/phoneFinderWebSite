@@ -8,7 +8,8 @@
        <div class="userInput">
          <h1 class="title">Escribe tu nombre de usuario en telegram sin el "@"</h1>
          <input id='username' v-model="username" type="text">
-         <input type="button" class="button" value="buscar telefono" v-on:click="findPhone()"> 
+         <input type="button" v-if="send" class="button" value="buscar telefono" v-on:click="findPhone()"> 
+         <input type="button" v-if="!send" class="button" value="buscando..."> 
        </div> 
     </div> 
   </div>
@@ -21,15 +22,16 @@ export default
   components: {},
   data() {
     return {
-      username: ""
+      username: "",
+      send:true
     }
   },
   methods: {
     
-    findPhone() 
+   async findPhone() 
     {
       console.log(this.username)
-      fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
+      await fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
       method: 'POST',
       headers: {
        'Content-Type': 'application/json'
@@ -43,6 +45,10 @@ export default
      .catch(error => {
      console.error(error);
      });
+    this.send=false
+    setTimeout(()=>{
+      this.send=true
+     },10000)
     }
   }
 }
@@ -65,6 +71,7 @@ animation-name: background;
 animation-duration: 2s;
 animation-fill-mode: forwards;
 animation-iteration-count: infinite;
+
 }
 
 .wrapper{
@@ -99,6 +106,7 @@ overflow: hidden;
 }
 .instructions{
   background-color:#000;
+
 }
 .button{
   border:3px solid #f00;
