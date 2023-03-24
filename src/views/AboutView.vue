@@ -59,4 +59,10 @@ width:640px;
 height:360px;
 }
 }
+@media (max-width: 600px) {
+  .instructions{
+width:480px;
+height:270px;
+}
+}
 </style>
