@@ -1,5 +1,8 @@
 <template>
   <div class="tutorialDiv">
+    <h1 class="title"> ¿Que es PhoneFinder?</h1>
+    <p>PhonePhinder hará vibrar o sonar tu telefono cada vez que ingreses tu nombre de usuario en la pagina principal de la pagina oficial de PhonFinder (¡¡recuerda seguir las instrucciones
+      antes de hacerlo!!) debes tener tu celular en sonido o vibracion para que seas capaz de sentirlo o escucharlo cada vez que lo pierdas.</p>
     <h1 class="title"> COMO USAR PHONEFINDER </h1>
     <h1 class="title2"> 1- Descarga telegram</h1>
     <img class="telegramPic" src="../assets/telegram.png" alt="">
