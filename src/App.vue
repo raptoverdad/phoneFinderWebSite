@@ -6,7 +6,7 @@
 
     <div class="options">
       <router-link class="routerLink" style="font-size: x-large;" to="/">Menú principal</router-link> 
-      <router-link class="routerLink" style="font-size: x-large;" to="/about">Tutorial</router-link>
+      <router-link class="routerLink" style="font-size: x-large;" to="/about">buscar telefono</router-link>
     </div>
 
   </nav>

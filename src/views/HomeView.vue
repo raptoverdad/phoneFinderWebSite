@@ -1,16 +1,18 @@
 <template>
   <div class="home">
     <div class="wrapper">  
-       <div class="instructions">
-        <img src="../assets/phoneFinderBot.png" alt="">
-        <h1 class="title firstTitle">hola, soy phoneFinder y haré vibrar o sonar tu telefono siempre que lo pierdas. siempre estaré aquí para ti si eso pasa. si no me conoces aún, puedes seguir las instrucciones para aprender a usarme</h1>
-       </div>
-       <div class="userInput">
-         <h1 class="title">Escribe tu nombre de usuario en telegram sin el "@"</h1>
-         <input id='username' v-model="username" type="text">
-         <input type="button" v-if="send" class="button" value="buscar telefono" v-on:click="findPhone()"> 
-         <input type="button" v-if="!send" class="button" value="buscando..."> 
-       </div> 
+      <h1>¡DESCUBRE PHONE FINDER!</h1>
+         <video width="640" height="360" controls>
+           <source src="ruta_del_video.mp4" type="video/mp4">
+           Tu navegador no admite el elemento de video.
+        </video>
+    <h1>¡MIRA EL VIDEO AQUÍ!</h1>
+    <h1>¡INSTRUCCIONES PARA USAR PHONE FINDER!</h1>
+         <video width="640" height="360" controls>
+           <source src="ruta_del_video.mp4" type="video/mp4">
+           Tu navegador no admite el elemento de video.
+        </video>
+    <h1>¡MIRA EL VIDEO AQUÍ!</h1>
     </div> 
   </div>
 </template>
@@ -31,7 +33,7 @@ export default
    async findPhone() 
     {
       console.log(this.username)
-      await fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
+      await fetch('http://localhost:3000', {
       method: 'POST',
       headers: {
        'Content-Type': 'application/json'
@@ -75,14 +77,16 @@ animation-iteration-count: infinite;
 }
 
 .wrapper{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 5px; /*The space between grid containers*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
   min-height: min-content;
   padding: 5px 0;
   min-width: 100vw;
   height: 100vh;
  overflow: hidden;
+ animation: background 10s infinite;
 }
 .userInput,.instructions{
 min-height:min-content;
@@ -124,12 +128,16 @@ overflow: hidden;
 color: #f00;
 text-align: center;
 }
+h1{
+ font-size: 6vh;
+ text-align: center;
+}
 @media (max-width: 1200px) {
   .wrapper{
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-auto-rows:min-content,min-content;
-  animation: background 3s infinite;
+  animation: background 10s infinite;
   max-width: 100vw;
 
 }
@@ -158,8 +166,20 @@ img{
 @keyframes background{
   0%{
  background-color: #000;
-  }100%{
+ color: #f00;
+  }25%{
     background-color: #f00;
+    color: #000;
+  }
+  50%{
+ background-color: #000;
+ color: #f00;
+  }75%{
+    background-color: #f00;
+    color: #000;
+  }100%{
+ background-color: #000;
+ color: #f00;
   }
 }
 </style>
