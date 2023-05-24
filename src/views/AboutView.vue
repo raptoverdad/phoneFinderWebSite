@@ -33,17 +33,8 @@ export default
    async findPhone() 
     {
       console.log(this.username)
-      await fetch('https://phonefinderbotserver-production.up.railway.app/findPhone', {
-      method: 'POST',
-      headers: {
-       'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ username: this.username })
-     })
-     .then(response => response.json())
-     .then(data => {
-      console.log("respuesta!:",data);
-     })
+      await axios.post("phonefinderbotserver-production.up.railway.app/findPhone",{username:this.username})
+     .then(res => response.json())
      .catch(error => {
      this.postError=true
      console.log('ERROR!!:',error)
