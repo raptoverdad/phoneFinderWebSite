@@ -84,9 +84,10 @@ animation-iteration-count: infinite;
   min-height: min-content;
   padding: 5px 0;
   min-width: 100vw;
-  height: 100vh;
+  height: min-content;
  overflow: hidden;
  animation: background 10s infinite;
+ padding: 5%;
 }
 .userInput,.instructions{
 min-height:min-content;
@@ -97,6 +98,9 @@ justify-content:center;
 align-items:center;
 padding: 5vh;
 overflow: hidden;
+}
+source{
+  margin: 5%;
 }
 #username{
   width: 30vw;
