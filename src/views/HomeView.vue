@@ -139,7 +139,7 @@ h1{
  text-align: center;
 }
 @media (max-width: 1200px) {
-  source{
+  video{
     width: 854px;
     height: 480px;
   }
@@ -170,9 +170,9 @@ img{
 border:2px solid #f00;
 }
 @media (max-width: 800px) {
-  source{
-    width: 640px;
-    height: 360px;
+  video{
+    width: 480px;
+    height: 270px;
   }
 
 img{

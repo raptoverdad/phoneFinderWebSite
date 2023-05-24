@@ -10,6 +10,7 @@
          <input id='username' v-model="username" type="text">
          <input type="button" v-if="send" class="button" value="buscar telefono" v-on:click="findPhone()"> 
          <input type="button" v-if="!send" class="button" value="buscando..."> 
+         <h1 class="error" v-if="postError">HUBO UN ERROR CON TU PETICIÓN PORFAVOR INTENTA MAS TARDE</h1>
        </div> 
     </div> 
   </div>
@@ -23,7 +24,8 @@ export default
   data() {
     return {
       username: "",
-      send:true
+      send:true,
+      postError:false
     }
   },
   methods: {
@@ -31,7 +33,7 @@ export default
    async findPhone() 
     {
       console.log(this.username)
-      await fetch('http://localhost:3000', {
+      await fetch('phonefinderbotserver-production.up.railway.app/findPhone', {
       method: 'POST',
       headers: {
        'Content-Type': 'application/json'
@@ -40,10 +42,10 @@ export default
      })
      .then(response => response.json())
      .then(data => {
-      console.log(data);
+      console.log("respuesta!:",data);
      })
      .catch(error => {
-     console.error(error);
+     this.postError=true
      });
     this.send=false
     setTimeout(()=>{
@@ -73,7 +75,10 @@ animation-fill-mode: forwards;
 animation-iteration-count: infinite;
 
 }
-
+.error{
+  color: #f00;
+  margin-top: 5%;
+}
 .wrapper{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
