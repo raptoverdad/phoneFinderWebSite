@@ -138,6 +138,10 @@ h1{
  text-align: center;
 }
 @media (max-width: 1200px) {
+  source{
+    width: 854px;
+    height: 480px;
+  }
   .wrapper{
   display: flex;
   justify-content: flex-start;
@@ -165,6 +169,10 @@ img{
 border:2px solid #f00;
 }
 @media (max-width: 800px) {
+  source{
+    width: 640px;
+    height: 360px;
+  }
 
 img{
   height: 20vh;
