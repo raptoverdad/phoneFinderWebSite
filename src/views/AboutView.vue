@@ -46,6 +46,7 @@ export default
      })
      .catch(error => {
      this.postError=true
+     console.log('ERROR!!:',error)
      });
     this.send=false
     setTimeout(()=>{
