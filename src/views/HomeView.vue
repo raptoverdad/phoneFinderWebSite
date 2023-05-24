@@ -6,13 +6,13 @@
            <source src="../assets/PHONE_FINDER_INTRO_ESPAÑOL.mp4" type="video/mp4">
            Tu navegador no admite el elemento de video.
         </video>
-    <h1>¡MIRA EL VIDEO AQUÍ!</h1>
+
     <h1>¡INSTRUCCIONES PARA USAR PHONE FINDER!</h1>
          <video width="640" height="360" controls>
            <source src="../assets/instruccionesPHONEFINDER.mp4" type="video/mp4">
            Tu navegador no admite el elemento de video.
         </video>
-    <h1>¡MIRA EL VIDEO AQUÍ!</h1>
+
     </div> 
   </div>
 </template>
@@ -139,12 +139,18 @@ h1{
 }
 @media (max-width: 1200px) {
   .wrapper{
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-auto-rows:min-content,min-content;
-  animation: background 10s infinite;
-  max-width: 100vw;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  min-height: min-content;
+  padding: 5px 0;
+  min-width: 100vw;
+  height: min-content;
+ overflow: hidden;
+ animation: background 10s infinite;
+ padding: 5%;
+ text-align: center;
 }
 #username{
   width: 60vw;
