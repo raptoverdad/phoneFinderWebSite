@@ -135,6 +135,7 @@ text-align: center;
 }
 h1{
  font-size: 6vh;
+ margin:2vw ;
  text-align: center;
 }
 @media (max-width: 1200px) {
