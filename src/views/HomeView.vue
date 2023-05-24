@@ -9,7 +9,7 @@
     <h1>¡MIRA EL VIDEO AQUÍ!</h1>
     <h1>¡INSTRUCCIONES PARA USAR PHONE FINDER!</h1>
          <video width="640" height="360" controls>
-           <source src="ruta_del_video.mp4" type="video/mp4">
+           <source src="../assets/instruccionesPHONEFINDER.mp4" type="video/mp4">
            Tu navegador no admite el elemento de video.
         </video>
     <h1>¡MIRA EL VIDEO AQUÍ!</h1>
