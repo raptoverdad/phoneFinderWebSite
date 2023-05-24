@@ -88,6 +88,7 @@ animation-iteration-count: infinite;
  overflow: hidden;
  animation: background 10s infinite;
  padding: 5%;
+ text-align: center;
 }
 .userInput,.instructions{
 min-height:min-content;
